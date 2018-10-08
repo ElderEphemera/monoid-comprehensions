@@ -1,0 +1,38 @@
+name:                monoid-comprehensions
+version:             0.1.0.0
+github:              "WhistlePayer/monoid-comprehensions"
+license:             BSD3
+author:              "Joshua Price"
+maintainer:          "joshprice247@gmail.com"
+copyright:           "Copyright (c) 2018, Joshua Price"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# synopsis:            TODO: Short description of your package
+category:            Compiler Plugin
+description:         Please see the README on GitHub at <https://github.com/WhistlePayer/monoid-comprehensions#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- ghc >=8.6 && <8.7
+- syb == 0.7
+
+ghc-options:
+- -Wall
+
+library:
+  source-dirs: src
+
+tests:
+  monoid-comprehensions-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -dcore-lint
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - monoid-comprehensions
