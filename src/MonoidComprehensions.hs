@@ -1,4 +1,3 @@
-{-# LANGUAGE NamedFieldPuns #-}
 module MonoidComprehensions (plugin) where
 
 import qualified Data.Generics as G
@@ -16,9 +15,8 @@ plugin = P.defaultPlugin
   , P.pluginRecompile = P.purePlugin }
 
 desugarMod :: P.HsParsedModule -> P.HsParsedModule
-desugarMod hpm@(P.HsParsedModule{P.hpm_module}) =
-  modifyModule $ G.everywhere (G.mkT desugarExpr) hpm_module
-  where modifyModule hpm_module' = hpm { P.hpm_module = hpm_module' }
+desugarMod hpm =
+  hpm { P.hpm_module = G.everywhere (G.mkT desugarExpr) $ P.hpm_module hpm }
 
 desugarExpr :: S.LHsExpr S.GhcPs -> S.LHsExpr S.GhcPs
 desugarExpr (L.L ps (S.HsPar px (L.L cs (S.HsDo dx ctx (L.L ss stmts)))))
