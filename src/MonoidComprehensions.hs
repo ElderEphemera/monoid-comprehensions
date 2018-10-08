@@ -1,5 +1,4 @@
 {-# LANGUAGE NamedFieldPuns #-}
-{-# LANGUAGE TemplateHaskellQuotes #-}
 module MonoidComprehensions (plugin) where
 
 import qualified Data.Generics as G
