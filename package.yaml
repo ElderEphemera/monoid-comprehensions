@@ -10,7 +10,7 @@ extra-source-files:
 - README.md
 - ChangeLog.md
 
-# synopsis:            TODO: Short description of your package
+synopsis:            An experimental GHC plugin for monoid comprehensions.
 category:            Compiler Plugin
 description:         Please see the README on GitHub at <https://github.com/WhistlePayer/monoid-comprehensions#readme>
 
