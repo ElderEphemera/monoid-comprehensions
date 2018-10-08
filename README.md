@@ -31,10 +31,10 @@ with something of the form:
 fold [ f x ... z | x <- toList xs, p x, ..., z <- toList zs, q x ... z ]
 ```
 
-*Note*: `-XParallelListComp` and `-XTransformListComp` are not supported, but
-`-XMonadComprehensions` should work just fine.
+*Note*: Neither `-XParallelListComp` nor `-XTransformListComp` are currently
+supported, but `-XMonadComprehensions` should work just fine.
 
 ## Links
 
 - [An excellent blog post about monoid comprehensions](https://lptk.github.io/programming/2018/10/04/comprehending-monoids-with-class.html)
-- [Inspiration for the syntax](https://github.com/phadej/idioms-plugins)
+- [Inspiration for the syntax (and implementation)](https://github.com/phadej/idioms-plugins)
