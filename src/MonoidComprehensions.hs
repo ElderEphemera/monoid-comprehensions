@@ -29,7 +29,14 @@ desugarExpr expr = expr
 desugarStmt :: S.ExprLStmt S.GhcPs -> S.ExprLStmt S.GhcPs
 desugarStmt (L.L ss (S.BindStmt sx pat body bind' fail')) =
   L.L ss $ S.BindStmt sx pat (toListExpr body) bind' fail'
+desugarStmt (L.L ss (S.ParStmt sx blocks mzip' bind')) =
+  L.L ss $ S.ParStmt sx (desugarPar <$> blocks) mzip' bind'
 desugarStmt stmt = stmt
+
+desugarPar :: S.ParStmtBlock S.GhcPs S.GhcPs -> S.ParStmtBlock S.GhcPs S.GhcPs
+desugarPar (S.ParStmtBlock px lstmts vars return') =
+  S.ParStmtBlock px (desugarStmt <$> lstmts) vars return'
+desugarPar (S.XParStmtBlock px) = S.XParStmtBlock px
 
 --------------------------------------------------------------------------------
 -- Expression helpers

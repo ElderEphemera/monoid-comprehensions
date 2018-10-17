@@ -31,8 +31,8 @@ with something of the form:
 fold [ f x ... z | x <- toList xs, p x, ..., z <- toList zs, q x ... z ]
 ```
 
-*Note*: Neither `-XParallelListComp` nor `-XTransformListComp` are currently
-supported, but `-XMonadComprehensions` should work just fine.
+*Note*: `-XParallelListComp`, `-XTransformListComp`, and `-XMonadComprehensions`
+should all work just fine, although nothing special is done with any of them.
 
 ## Links
 
