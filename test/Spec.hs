@@ -27,6 +27,9 @@ main = runTestTT $ test
          then group by category using groupWith]
     ~=? ([[(the category, average price)] | Prod{..} <- inventory,
           then group by category using groupWith])
+  , "MonadComprehensions"
+    ~:  getSum (foldMap Sum [x*y | x <- Just 2, y <- Just (3::Int)])
+    ~=? getSum ([Sum (x*y) | x <- Just 2, y <- Just (3::Int)])
   ]
 
 --------------------------------------------------------------------------------
