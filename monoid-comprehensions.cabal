@@ -1,11 +1,5 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.32.0.
---
--- see: https://github.com/sol/hpack
---
--- hash: 433199b972a2e95999519fbc34bb19e38c5b0d075fd3ca84aba2e157415f9686
-
 name:           monoid-comprehensions
 version:        0.1.0.0
 synopsis:       An experimental GHC plugin for monoid comprehensions.
