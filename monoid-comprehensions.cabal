@@ -3,10 +3,10 @@ cabal-version: 1.12
 name:           monoid-comprehensions
 version:        0.1.0.0
 synopsis:       An experimental GHC plugin for monoid comprehensions.
-description:    Please see the README on GitHub at <https://github.com/WhistlePayer/monoid-comprehensions#readme>
+description:    Please see the README on GitHub at <https://github.com/ElderEphemera/monoid-comprehensions#readme>
 category:       Compiler Plugin
-homepage:       https://github.com/WhistlePayer/monoid-comprehensions#readme
-bug-reports:    https://github.com/WhistlePayer/monoid-comprehensions/issues
+homepage:       https://github.com/ElderEphemera/monoid-comprehensions#readme
+bug-reports:    https://github.com/ElderEphemera/monoid-comprehensions/issues
 author:         Joshua Price
 maintainer:     joshprice247@gmail.com
 copyright:      Copyright (c) 2018, Joshua Price
@@ -19,7 +19,7 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/WhistlePayer/monoid-comprehensions
+  location: https://github.com/ElderEphemera/monoid-comprehensions
 
 library
   exposed-modules:
